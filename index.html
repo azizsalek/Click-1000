@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111126">
+  <meta name="description" content="Click-1000 — لعبة نقر ممتعة اجمع فيها العملات وطوّر قوتك.">
+  <title>Click-1000 | لعبة النقر</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Click-1000 الصفحة الرئيسية"><span class="brand-icon">✦</span><span>CLICK<span class="brand-accent">1000</span></span></a>
+      <div class="top-actions">
+        <button class="icon-button" id="sound-toggle" aria-label="تفعيل أو إيقاف الصوت" title="الصوت">♫</button>
+        <button class="icon-button" id="reset-button" aria-label="إعادة تعيين اللعبة" title="إعادة تعيين">↻</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow"><span class="live-dot"></span> لعبة النقر الأسطورية</div>
+      <h1>كل نقرة تقرّبك <span>للقمة!</span></h1>
+      <p class="subtitle">اجمع العملات، اشترِ الترقيات، واصنع أقوى إمبراطورية نقر.</p>
+    </section>
+
+    <section class="stats-grid" aria-label="إحصائيات اللعبة">
+      <article class="stat-card"><span class="stat-label">رصيدك</span><div class="stat-value"><span class="coin-small">◈</span><strong id="coins">0</strong></div><span class="stat-foot">عملة ذهبية</span></article>
+      <article class="stat-card"><span class="stat-label">إجمالي النقرات</span><div class="stat-value"><strong id="total-clicks">0</strong><span class="stat-emoji">👆</span></div><span class="stat-foot">كل نقرة لها قيمة</span></article>
+      <article class="stat-card"><span class="stat-label">قوة النقرة</span><div class="stat-value"><strong id="click-power">1</strong><span class="stat-emoji">⚡</span></div><span class="stat-foot">عملة لكل نقرة</span></article>
+    </section>
+
+    <section class="game-layout">
+      <article class="click-panel">
+        <div class="panel-heading"><div><span class="section-kicker">اجمع العملات</span><h2>انقر واكسب</h2></div><span class="level-pill" id="level">المستوى 1</span></div>
+        <div class="progress-wrap"><div class="progress-meta"><span>التقدم للمستوى التالي</span><span id="progress-label">0 / 100</span></div><div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div></div>
+        <div class="click-stage">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <button id="click-target" class="click-target" aria-label="انقر لجمع العملات">
+            <span class="target-glow"></span><span class="target-star">✦</span><span class="target-core">◈</span><span class="target-caption">اضغط هنا!</span>
+          </button>
+          <span class="float-hint hint-one">+1</span><span class="float-hint hint-two">✦</span>
+        </div>
+        <div class="click-bottom"><span>💡 <span id="tip">كل نقرة تمنحك عملة واحدة.</span></span><span class="autosave">● حفظ تلقائي</span></div>
+      </article>
+
+      <aside class="shop-panel">
+        <div class="panel-heading"><div><span class="section-kicker">طوّر قوتك</span><h2>متجر الترقيات</h2></div><span class="shop-icon">♧</span></div>
+        <button class="upgrade-card" id="upgrade-click">
+          <span class="upgrade-icon purple">⚡</span><span class="upgrade-info"><strong>نقرة أقوى</strong><small>زد العملات من كل نقرة</small><span class="upgrade-level" id="click-upgrade-level">المستوى 0</span></span><span class="upgrade-buy"><strong id="click-upgrade-cost">25</strong><small>◈ شراء</small></span>
+        </button>
+        <button class="upgrade-card" id="upgrade-auto">
+          <span class="upgrade-icon blue">⟳</span><span class="upgrade-info"><strong>نقر تلقائي</strong><small>اكسب عملات كل ثانية</small><span class="upgrade-level" id="auto-upgrade-level">المستوى 0</span></span><span class="upgrade-buy"><strong id="auto-upgrade-cost">50</strong><small>◈ شراء</small></span>
+        </button>
+        <div class="income-card"><span class="income-icon">↗</span><div><small>الدخل التلقائي</small><strong><span id="auto-income">0</span> <small>عملة / ثانية</small></strong></div><span class="income-spark">✧</span></div>
+        <div class="shop-note">كل ترقية تزيد تكلفتها — اختر بحكمة! <span>✦</span></div>
+      </aside>
+    </section>
+    <footer><span>© 2026 Click-1000</span><span>صُنع للمتعة، نقرة بعد نقرة ✦</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="game.js"></script>
+</body>
+</html>
